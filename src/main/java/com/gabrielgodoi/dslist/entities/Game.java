@@ -14,10 +14,12 @@ public class Game {
     private String title;
 
     @Column(name = "game_year")
-    private Integer year;
-    private String genero;
+    private Integer gameYear;
+    private String genre;
     private String platforms;
     private Double score;
+
+    @Column(name = "img_url")
     private String imgUrl;
 
     // o jpa define varchar para String automaticamente, por isso, é necessário que a gente defina essas coisas
@@ -31,12 +33,12 @@ public class Game {
     public Game() {
     }
 
-    public Game(Long id, String title, Integer year, String genero, String platforms, Double score, String imgUrl,
+    public Game(Long id, String title, Integer gameYear, String genre, String platforms, Double score, String imgUrl,
                 String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
-        this.year = year;
-        this.genero = genero;
+        this.gameYear = gameYear;
+        this.genre = genre;
         this.platforms = platforms;
         this.score = score;
         this.imgUrl = imgUrl;
@@ -60,20 +62,20 @@ public class Game {
         this.title = title;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getGameYear() {
+        return gameYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setGameYear(Integer gameYear) {
+        this.gameYear = gameYear;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenero(String genre) {
-        this.genero = genre;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getPlatforms() {
