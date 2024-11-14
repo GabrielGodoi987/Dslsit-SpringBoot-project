@@ -5,7 +5,7 @@ import com.gabrielgodoi.dslist.entities.Game;
 public class GameMinDTO {
     public Long id;
     private String title;
-    private Integer year;
+    private Integer gameYear;
     private String imgUrl;
     private String shortDescription;
 
@@ -14,7 +14,7 @@ public class GameMinDTO {
     public GameMinDTO(Game entity){
        id = entity.getId();
        title = entity.getTitle();
-       year = entity.getGameYear();
+       gameYear = entity.getGameYear();
        imgUrl = entity.getImgUrl();
        shortDescription = entity.getShortDescription();
     }
@@ -27,8 +27,8 @@ public class GameMinDTO {
         return title;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getGanmeYear() {
+        return gameYear;
     }
 
     public String getImgUrl() {
